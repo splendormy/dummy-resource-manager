@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: dummy-resource-manager
+Bundle-Version: 1.0.0
+Import-Package: com.ibm.tx.jta;version="[2.0,3)",
+ javax.transaction;version="1.1.0",
+ javax.transaction.xa;version="1.1.0"
+Export-Package: dummyrm; version="1.0.0"
