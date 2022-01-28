@@ -11,6 +11,13 @@ import com.ibm.tx.jta.TransactionManagerFactory;
  */
 public class DummyXAUtil {
 
+	/**
+	 * 
+	 * @param name The name of Dummy XA Resource.
+	 * @param sleepPosition Sleep Position of created Dummy XA Resource.
+	 * @param sleepDuration Sleep Duration of created Dummy XA Resource.
+	 * @return DummyXAResource
+	 */
 	public static DummyXAResource enlist( String name,
 			                              DummyXAResource.SleepPosition sleepPosition,
 			                              int sleepDuration ) throws RollbackException, SystemException {
@@ -28,7 +35,7 @@ public class DummyXAUtil {
 		// Gets ExtendedTransactionManager
 		ExtendedTransactionManager etm = TransactionManagerFactory.getTransactionManager();
 		
-		// Register DummyXAResourceInfo to xtendedTransactionManager
+		// Register DummyXAResourceInfo to ExtendedTransactionManager
 		int id = etm.registerResourceInfo( DummyXAResourceFactory.class.getName(), res.getInfo() );
 		
 		// Enlists DummyXAResource.
