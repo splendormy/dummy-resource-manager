@@ -4,12 +4,12 @@ Dummy Resource Manager (Dummy XA Resource) for WebSphere Liberty.
 
 ## How to install (setup)
 
-Locate the following files to the specified directories. You may have to create these directories.
+Place the following files in the specified directories. You might need to create these directories.
 
-* Locate `dummy-resource-manager.jar` in `<wlp_root>/usr/extension/lib` directory.
-* Locate `dummy-resource-manager.mf` in `<wlp_root>/usr/extension/lib/features` directory.
+* Place `dummy-resource-manager.jar` in `<wlp_root>/usr/extension/lib` directory.
+* Place `dummy-resource-manager.mf` in `<wlp_root>/usr/extension/lib/features` directory.
 
-Add the following lines in WebSpere Liberty Server Configuration file (`server.xml`).
+Add the following lines in the WebShpere Liberty Server Configuration file (`server.xml`).
 
     <featureManager>
         <feature>usr:dummy-resource-manager</feature>
@@ -18,7 +18,7 @@ Add the following lines in WebSpere Liberty Server Configuration file (`server.x
 ## How to use
 
 By invoking `dummyrm.DummyXAUtil.enlist(...)` in a global transaction scope,
-you can register a Dummy XA Resource to the global transaction.
+you can register a Dummy XA Resource with the global transaction.
 
 To register a Dummy XA Resource, `dummyrm.DummyXAUtil.enlist(...)` uses `com.ibm.tx.jta.TransactionManagerFactory` and `com.ibm.tx.jta.ExtendedTransactionManager` provided by WebSphere Liberty.
 
