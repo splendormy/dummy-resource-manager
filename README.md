@@ -1,6 +1,8 @@
 # dummy-resource-manager
 
-Dummy Resource Manager (Dummy XA Resource) for WebSphere Liberty.
+Java EE version of Dummy Resource Manager (Dummy XA Resource) for WebSphere Liberty.
+
+**Jakarta EE** version is [here](https://github.com/splendormy/jakarta-dummy-resource-manager).
 
 ## How to install (setup)
 
